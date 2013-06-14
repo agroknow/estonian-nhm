@@ -1,0 +1,1019 @@
+/*! normalize.css 2011-11-04T15:38 UTC - http://github.com/necolas/normalize.css */
+
+/* =============================================================================
+ HTML5 display definitions
+ ========================================================================== */
+
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ */
+
+audio:not([controls]) {
+    display: none;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+
+[hidden] {
+    display: none;
+}
+
+
+/* =============================================================================
+ Base
+ ========================================================================== */
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Keeps page centred in all browsers regardless of content height
+ * 3. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+html {
+    font-size: 100%; /* 1 */
+    overflow-y: scroll; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 3 */
+    -ms-text-size-adjust: 100%; /* 3 */
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+
+body {
+    margin: 0;
+	padding:0;
+	background:#ebebeb;
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+
+body,
+button,
+input,
+select,
+textarea {
+	/*font-family:'Trebuchet MS', Helvetica, Arial, sans-serif;*/
+    font-family: 'lucida sans', 'trebuchet MS', 'Tahoma';
+	color:#181818;
+	font-size:14px;
+}
+
+
+/* =============================================================================
+ Links
+ ========================================================================== */
+
+a{
+	color:#114499;
+	text-decoration:underline;
+}
+
+.top-bar a{
+	color:#181818;
+}
+
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+
+a:hover,
+a:active {
+	color:#181818;
+    outline: 0;
+}
+
+
+/* =============================================================================
+ Typography
+ ========================================================================== */
+
+h1, h2, h3, h4, h1 a, h2 a, h3 a, h4 a {
+	color:#181818;
+	text-decoration:none;
+}
+
+/*
+ * Neutralise smaller font-size in 'section' and 'article' in FF4+, Chrome, S5
+ */
+
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 18px;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+
+/* 1 */
+
+
+q {
+    quotes: none;
+}
+
+/* 2 */
+
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+small {
+    font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+
+/* =============================================================================
+ Lists
+ ========================================================================== */
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+	list-style:none;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+
+/* =============================================================================
+ Embedded content
+ ========================================================================== */
+
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img {
+	border-color: #FFF;
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+ Figures
+ ========================================================================== */
+
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+
+figure {
+    margin: 0;
+}
+
+
+/* =============================================================================
+ Forms
+ ========================================================================== */
+
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+
+form {
+    margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+
+fieldset {
+    border:none;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects alignment displayed oddly in IE6/7
+ */
+
+legend {
+    border: 0; /* 1 */
+    *margin-left: -7px; /* 2 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+
+button,
+input {
+    line-height: normal; /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer; /* 1 */
+    -webkit-appearance: button; /* 2 */
+    *overflow: visible;  /* 3 */
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding that is displayed in S5, Chrome on OS X
+ */
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+
+/* =============================================================================
+ Tables
+ ========================================================================== */
+
+/*
+ * Remove most spacing between table cells
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; clear:both; }
+
+/*
+ * Semantics
+ */
+
+.caps {
+	text-transform:uppercase;
+}
+.small{
+	font-size:11px;
+	letter-spacing:0.22em;
+	margin:0;
+}
+img.left{
+	float:left;
+}
+img.right{
+	float:right;
+}
+
+
+
+/* =============================================================================
+ Other styles
+ ========================================================================== */
+
+/*
+ * ###   LAYOUT   ###
+ */
+html{
+ 	overflow-x: hidden;
+	overflow-y: auto;}
+body {
+	width:100%;
+	/* position:relative; */
+	background:#fff;
+}
+#wrapper {
+    margin: 0;
+	width:100%;
+	min-width: 1000px;
+	position:relative;
+	background: url(images/bg-cutout-photos.png) center top no-repeat;
+}
+.top-bar-wrap {
+    margin: 0;
+	width:100%;
+	height:29px;
+	background:#fff;
+	border-bottom:1px solid #181818;
+}
+.top-bar {
+    margin:0 auto;
+	width:970px;
+}
+#container {
+    margin: 0 auto;
+    position: relative;
+	width:970px;
+	padding:0;
+}
+#sidebar {
+	float:left;
+	width:145px;
+	margin:0 20px 0 0;
+}
+#footer {
+	padding:30px 0 0;
+    margin:0 auto;
+	width:970px;
+    position: relative;
+}
+#logo {
+	width:180px;
+	height:293px;
+	position:absolute;
+	z-index:10;
+	left:185px;
+	top:59px;
+	background: url(images/logo-loodusmuseum-est.png) center top no-repeat;
+}
+#logo a {
+	display:block;
+	font-size:0;
+	line-height:0;
+	text-indent:-999em;
+	width:180px;
+	height:293px;
+}
+
+/*  # BG images #  */
+.bg-images {
+	/*display: none;*/
+	position:absolute;
+	width:956px;
+	height:582px;
+	top:0;
+	right:50%;
+	margin:0 -708px 0 0;
+	overflow:hidden;
+	z-index:0;
+}
+.bg-images ul {
+	margin:0;
+	padding:0;
+	width:3000px;
+	height:582px;
+	position:relative;
+}
+.bg-images ul li {
+	margin:0;
+	padding:0;
+	width:956px;
+	height:582px;
+	float:left;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+
+/*  # TOP BAR #  */
+.top-bar{
+	position: relative;
+}
+.top-bar p {
+	margin:0;
+}
+.top-bar .slogan {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	position:relative;
+	font-weight:bold;
+	line-height:29px;
+}
+.top-bar .slogan a{
+	text-decoration: none;
+	border: none;}
+.top-bar .languages {
+	position: absolute;
+	float:right;
+	right: 0;
+	top:0;
+	margin:0 0 0 30px;
+}
+.top-bar .languages li {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:top;
+	margin:0 4px;
+}
+.top-bar .languages li a {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	padding:6px 0;
+	text-decoration:none;
+}
+.top-bar .languages li.active a {
+	font-weight:bold;
+	background: url(images/arrow-sml-black.png) center top no-repeat;
+}
+.top-bar .fb-bar {
+	position: relative;
+	float:right;
+	margin:0 0 0 30px;
+	line-height:29px;
+	font-size:12px;
+	
+	position: absolute;
+	float:right;
+	right: 150px;
+	width: 300px;
+	top:0;
+}
+.top-bar .fb-bar div {
+	position: absolute;
+	right: 0;
+	top:2px;
+	overflow: hidden;
+	height: 28px;
+	font-style:italic;
+}
+
+/*
+ * 	Main menu
+ */
+#mainmenu {
+	width:145px;
+	min-height:297px;
+	margin:0 0 35px 0;
+	padding:0 0 74px;
+	text-align:right;
+	float:left;
+	position:relative;
+	background: url(images/bg-mainmenu.png) center bottom no-repeat;
+}
+#mainmenu ul {
+	margin:30px 0 0 0;
+}
+#mainmenu li {
+	margin:22px 0 22px 0;
+	padding:0 20px 0 0;
+	display:block;
+}
+#mainmenu a {
+	color:#fff;
+	line-height:100%;
+	font-size:15px;
+	text-decoration:none;
+}
+#mainmenu li.active {
+	background:#fff;
+	margin:0 1px;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+#mainmenu li.active a {
+	font-weight:bold;
+	color:#181818;
+	display:block;
+	background: url(images/arrow-sml-black.png) 10px 5px no-repeat;
+}
+#mainmenu ul.submenu {
+	padding:0;
+	margin:0;
+}
+#mainmenu ul.submenu li {
+	padding:0;
+    
+	margin:7px 0;
+}
+#mainmenu ul.submenu a {
+	color:#181818;
+	background:none;
+	font-weight:normal;
+	font-size:14px;
+}
+#mainmenu .submenu .active a {
+	font-weight:bold;
+}
+
+/*  # SIDEBAR #  */
+#sidebar .sidebox {
+	margin:0 20px 15px 0;
+	text-align:right;
+	font-size:12px;
+}
+#sidebar .sidebox li {
+	margin:0 0 10px;
+}
+#sidebar .sidebox h3 {
+	margin:0 0 4px;
+	padding:0 0 0 20px;
+	font-size:14px;
+}
+#sidebar .sidebox h3 em {
+	float:left;
+	margin:2px 0 2px -20px;
+	width:16px;
+	height:16px;
+}
+#sidebar .sidebox.contacts h3 em {
+	background: url(images/icons.png) left 0 no-repeat;
+}
+#sidebar .sidebox.times h3 em {
+	background: url(images/icons.png) left -25px no-repeat;
+}
+#sidebar .sidebox.events h3 em {
+	background: url(images/icons.png) left -50px no-repeat;
+}
+#sidebar .sidebox.events li a {
+	display:block;
+}
+
+#sidebar .sidebox.events a.calendar-link {
+}
+
+.dark-link {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	clear:both;
+	color:#fff;
+	padding:6px 10px;
+	font-size:12px;
+	background-color:#181818;
+	text-decoration:none;
+}
+.dark-link:hover {
+	color:#fff;
+}
+
+/*
+ * 	CONTENT
+ ======================
+ */
+#maincontent {
+	width:785px;
+	margin: 350px 300px 0 20px;
+	padding:0 0 20px;
+	position:relative;
+	float:right;
+}
+#maincontent.with-sidebar {
+	width:488px;
+	margin-right:297px;
+}
+#maincontent .push {
+	width:300px;
+	height:120px;
+	float:right;
+}
+
+#maincontent .article-list li {
+	margin:0 0 25px 0;
+}
+#maincontent .article-list h2 {
+	font-size:18px;
+	margin:0 0 15px 0;
+}
+#maincontent .home-articles.article-list h2 {
+	margin:0 0 2px;
+	padding-right: 50px;
+}
+#maincontent .article-list .date {
+	display:block;
+	margin:0 0 10px;
+	color:#696969;
+	font-size:12px;
+	font-weight:bold;
+}
+#maincontent .article-list p {
+	margin:0 0 10px;
+}
+
+/*  # Right sidebar #  */
+.banners {
+	background-color: #FFF;
+	width:280px;
+	margin:0 -297px 0 0;
+	float:right;
+	border-top:5px solid #fff;
+	border-left:5px solid #fff;
+}
+.banners p{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: inline;}
+.banners .banner {
+	margin:0 0 10px;
+}
+
+/*  Article  */
+
+.page-title {
+	margin:0 0 25px;
+}
+.page-title h1 {
+	margin:0;
+}
+
+.date {
+	font-size:12px;
+	color:#696969;
+	font-weight:bold;
+	display:block;
+}
+
+.article {
+	margin:0 0 10px 0;
+}
+.article-content p IMG{
+	padding: 20px;}
+.article-content p {
+	margin:10px 0;
+}
+.article-content p.lead {
+	font-weight:bold;
+}
+.article-content p.emp {
+	padding:12px 20px;
+	background-color:#ebebeb;
+}
+.article-content ul {
+}
+.article-content ul > li {
+	margin:0 0 10px 0;
+	padding:0 0 0 20px;
+	background: url(images/list-bullet.png) 5px 5px no-repeat;
+}
+.article-content ol {
+	margin:0 0 0 25px;
+}
+.article-content ol > li {
+	list-style:decimal;
+	margin:0 0 10px 20px;
+}
+
+.article-content table {
+	border-collapse:collapse;
+}
+.article-content table th, .article-content table td {
+	padding:14px 18px;
+}
+.article-content table th {
+	background-color:#181818;
+	border:1px solid #858585;
+	color:#fff;
+}
+.article-content table td {
+	border:1px solid #858585;
+}
+.article-content table .odd td {
+	background-color:#fff;
+}
+.article-content table .even td {
+	background-color:#ebebeb;
+}
+
+.breadcrumb {
+	margin:0;
+	font-size:12px;
+}
+.breadcrumb a {
+	text-decoration:underline;
+}
+.breadcrumb span {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	padding:0 3px;
+}
+
+/* Gallery in article */
+.article-content .gallery {
+	margin:15px 0 5px;
+}
+.article-content .gallery li {
+	background:none;
+	float:left;
+	padding:0;
+	margin:0;
+	margin:0 0 25px 34px;
+	*margin:0 0 25px 25px;
+}
+.article-content .gallery li a {
+}
+.article-content .article-gallery li {
+	margin:0 0 5px 34px;
+}
+.article-content .gallery li:nth-child(4n+1), .article-content .gallery li:first-child {
+	margin-left:0;
+}
+
+/* Collections */
+.article-content .collection-list .collection-item {
+	height:128px;
+	margin:0 0 30px;
+}
+.article-content .collection-list .collection-item img{
+	float:left;
+}
+.article-content .collection-list .collection-item h2{
+	background: url(images/bg-collection-heading.png) left 0 no-repeat;
+	padding:0;
+	margin:0 0 0 170px;
+	height:54px;
+	line-height:54px;
+}
+.article-content .collection-list .collection-item h2 a {
+	padding:0 20px;
+	color:#fff;
+	font-size:18px;
+	display:block;
+}
+.article-content .collection-list .collection-item h2:hover{
+	background: url(images/bg-collection-heading.png) left bottom no-repeat;
+}
+.article-content .collection-list .collection-item h2:hover a {
+	color:#181818;
+}
+.article-content .collection-list .collection-item p{
+	padding:20px;
+	margin:0 0 0 170px;
+}
+
+/* Calendar */
+.article.events .calendar{
+	background-color:#181818;
+	color:#fff;
+}
+
+/* News and archive */
+.article .article-heading{}
+
+.article .article-heading .date{
+	margin:-10px 0 0;
+}
+
+.article.archive{
+	border-top:1px solid #181818;
+	margin:20px 0;
+}
+.article.archive .article-heading h2{
+	margin:20px 0 10px;
+}
+.article.archive .archive-list{
+	margin:10px 0;
+}
+.article.archive .article-content li{
+	background:none;
+	padding:0;
+}
+.article.archive li .date{
+	margin:0;
+	float:left;
+	width:130px;
+	line-height:21px;
+}
+.article.archive li h3{
+	margin:0 0 0 130px;
+}
+.article.archive li h3 a{
+	text-decoration:underline;
+	font-weight:normal;
+	font-size:14px;
+}
+
+
+/*
+ * 	FOOTER
+ ======================
+ */
+#footer .sponsors {
+	text-align:right;
+}
+#footer .sponsors li {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	margin:0 5px;
+}
+
+
+
+/*
+ #scms_editor_toolbar{
+ position: absolute;
+ top:-28px !important;}
+ */
+
+
