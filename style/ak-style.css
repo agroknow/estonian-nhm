@@ -648,11 +648,12 @@ a.grflag {
 
 .access, .reportaproblem {
 	padding:35px 0 0 0;
-	margin:22px 0 0 28px;
+    margin: 2px 11px 0 28px;
 	background-position:center top;
 	background-repeat:no-repeat;
 	display:inline-block;
 	font-size:12px;
+    float:right;
 }
 
 .access{
