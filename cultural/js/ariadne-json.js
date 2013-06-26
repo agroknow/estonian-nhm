@@ -21,7 +21,7 @@ function getItemJSONP(itemID)
                 var record = tmp.result.metadata[0];
                 
                 //alert(thisJson);
-                                
+                
                 //left_sidebar
                 
                 //-//collection
@@ -44,7 +44,7 @@ function getItemJSONP(itemID)
                 }
                 }
                 }
-                                
+                
                 //-//Scientific Name
                 if(record.scientificName!=undefined){
                 var tempScienName = Object.keys(record.scientificName);
@@ -55,9 +55,9 @@ function getItemJSONP(itemID)
                 if(i!=tempScienName.length-1){ jQuery('#scientific_name').append(", "); }
                 }
                 }
-
+                
                 }
-                                
+                
                 //-//Spatial Coverage
                 if(record.spatial!=undefined){
                 var tempSpatial = Object.keys(record.spatial);
@@ -73,20 +73,20 @@ function getItemJSONP(itemID)
                 }
                 
                 }
-
+                
                 }
-                                
+                
                 //-//date created
                 
                 if(record.created!=undefined)
                 {
                 jQuery('#date_created').append(record.created);
                 
-//                var testDate = Object.keys(record.created)
-//                for(var i=0;i<testDate.length;i++){
-//                jQuery('#date_created').append(record.created[testDate[i]]);
-//                if(i!=testDate.length-1){ jQuery('#date_created').append(", "); }
-//                }
+                //                var testDate = Object.keys(record.created)
+                //                for(var i=0;i<testDate.length;i++){
+                //                jQuery('#date_created').append(record.created[testDate[i]]);
+                //                if(i!=testDate.length-1){ jQuery('#date_created').append(", "); }
+                //                }
                 
                 }
                 
@@ -107,11 +107,16 @@ function getItemJSONP(itemID)
                 
                 //-//language
                 if(record.Languages!=undefined){
+                if (typeof record.Languages === 'object'){
                 var tempLangs = Object.keys(record.Languages);
                 for(var i=0; i <tempLangs.length; i++)
                 {
                 if(record.Languages[tempLangs[i]]!=undefined){
                 jQuery('#language').append('<span class=\"flag '+record.Languages[tempLangs[i]]+'flag\">'+record.Languages[tempLangs[i]]+'</span>');                }
+                }
+                }
+                else{
+                jQuery('#language').append('<span class=\"flag '+record.Languages+'flag\">'+record.Languages+'</span>');
                 }
                 }
                 
@@ -182,7 +187,7 @@ function getItemJSONP(itemID)
                 }
                 }
                 }
-                                
+                
                 //-//language
                 if(record.Languages!=undefined){
                 var tempLangs = Object.keys(record.Languages);
