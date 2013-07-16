@@ -202,29 +202,36 @@
     
 }
 
-.slider-navigation a{
-    color:black;
-    text-decoration:none;
-}
-
 .slider-prev{
     float:left;
     padding-right:10px;
     text-decoration:none;
+    color:black;
 }
 
 .slider-next{
     float:left;
     padding-left:10px;
     text-decoration:none;
+    color:black;
 }
 
 .pager{
     float:left;
+    padding:0px;
+    padding-top:5px;
+}
+.pager a{
+    float:left;
+    text-indent:-9999px;
+	background:url(images/pager_sprite_est.png) 3px 3px no-repeat;
+	height:13px;
+	width:13px;
+	display:inline-block;
 }
 
-.activeSlide{
-    color:red !important;
+.pager a.activeSlide, .pager a:hover {
+	background-position:3px -20px;
     
 }
 
