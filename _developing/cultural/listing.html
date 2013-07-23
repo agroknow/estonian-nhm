@@ -48,7 +48,7 @@
                     <SCRIPT type="text/javascript" src="js/finder-js/jsonp.js"></SCRIPT>
                     <SCRIPT type="text/javascript" src="js/finder-js/sha1.js"></SCRIPT>
                     <SCRIPT type="text/javascript" src="js/finder-js/jaml-all.js"></SCRIPT>
-                    <SCRIPT type="text/javascript" src="js/finder-js/finder-estonian.js"></SCRIPT>
+                    <SCRIPT type="text/javascript" src="js/finder-js/finder.js"></SCRIPT>
                     <!---------------------------------- end listing related-->
                     
                     <!--more css-->
@@ -204,8 +204,12 @@
                         </div>
                 
                 </section>
-                
+                <!-------------------------------------------------------- end search-->
+                    
                 </div> <!-- #maincontent -->
+            
+            
+
             
             
                 <div id="footer" class="clearfix">
@@ -215,7 +219,7 @@
   
         <script type="text/javascript">
             var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-42040521-1']);
+            _gaq.push(['_setAccount', 'UA-42040521-12']);
             _gaq.push(['_trackPageview']);
             
             (function() {
@@ -223,30 +227,26 @@
              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
              })();
+            
             </script>
-        
         <script type="text/javascript">
             /*
              * function customizeFinder() is called at initialisation time
              * you need to change values repositoryName and serviceUrl
              * and also the same values inside the -finder.js- !
              */
-            $.noConflict();
+          
             function customizeFinder() {
                 return {
-                    /* limit collections|providers*/
-   					"selectedProviders":["EDUTNHM"],
+                    "selectedProviders":["The Estonian Museum of Natural History"],
                     "selectedLanguage":"en",
                     "externalSources": ["wp","scr","ss","gb"],
                     "pageContainers": ['bottom','top'],
-                    "facets": ["language","lrt", "context", "iur"], //,"rights" ,"format" "tagr"
+                    "facets" : ["collection","language","format","classification"], //"rights", "provider" removed
                     "maxLengthDescription":  300,
                     "pageSize": 6,
-                    "repositoryName": "Organic.Edunet",//find this in the ariadne.properties file inside your Ariadne folder  ex."repositoryName":"AriadneNext Repository"
-                    "serviceUrl":"http://83.212.96.169:8080/glnRepo/api/ariadne/restp"
-                    
-                    //"repositoryName": "Organic.Edunet",//find this in the ariadne.properties file inside your Ariadne folder  ex."repositoryName":"AriadneNext Repository"
-                    //"serviceUrl":"http://83.212.96.169:8080/OE_repos/api/ariadne/restp"
+                    "repositoryName": "NE_Repo",
+                    "serviceUrl":"http://83.212.101.124:8080/NE_Repository_Exp/api/ariadne/restp"
                     
                     
                 }
@@ -254,7 +254,8 @@
             </script>
         
         
-<!--<script type="text/javascript">
+<!--
+        <script type="text/javascript">
             var noConflict = false;
             if (typeof jQuery == 'undefined')
             {
