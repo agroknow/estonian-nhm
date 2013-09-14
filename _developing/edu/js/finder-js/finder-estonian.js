@@ -548,7 +548,7 @@ $('noResults').show();
                           
           oddCtr++;
           item.isOdd = oddCtr;
-        // alert(JSON.stringify(item));
+          console.log(item);
           
           if(item.format!=undefined && item.format[0]!=undefined){
           if (item.format[0].indexOf('pdf') != -1)
