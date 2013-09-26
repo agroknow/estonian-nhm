@@ -490,16 +490,47 @@ a.secondary:hover { color:#e63e45;text-decoration:underline; }
 }
 
 
-/**
- ================================================================ITEM VIEW============================================
+/**=====================================ITEM VIEW============================================
  */
 /*Left Sidebar in item*/
+.item_label
+{
+	font-size: 1.2em;
+}
+
+.item_value
+{
+	font-size: 1em;
+	color:#595a5d;
+}
+
+#itemThumb img
+{
+	width:160px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 1px 1px 4px #000000;
+	-moz-box-shadow: 1px 1px 4px #000000;
+	-o-box-shadow: 1px 1px 4px #000000;
+	-ms-box-shadow: 1px 1px 4px #000000;
+	box-shadow: 1px 1px 4px #000000;
+}
+
+.item_title_link
+{
+	font-size: 1.2em;
+}
+
 .leftSidebarInfo {
     background: none repeat scroll 0 0 transparent;
     border-right: 1px solid black;
     color: black;
     float: left;
     width: 210px;
+    padding-top: 37px;
 }
 
 .leftSidebarInfo h2{
@@ -700,7 +731,7 @@ a.grflag {
 
 .access, .reportaproblem {
 	padding:35px 0 0 0;
-    margin: 2px 11px 0 28px;
+    margin: 22px 11px 20px 28px;
 	background-position:center top;
 	background-repeat:no-repeat;
 	display:inline-block;

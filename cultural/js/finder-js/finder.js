@@ -529,7 +529,7 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                           oddCtr++;
                           item.isOdd = oddCtr;
                           
-                          console.log(JSON.stringify(item));
+                          console.log(item);
                           
                           if(item.format[0].value!=undefined){
                           if (item.format[0].value.indexOf('pdf') != -1)
@@ -824,14 +824,15 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                    var thisTitle = "undefined";
                    if(data.title!=undefined)
                    {
-                   thisTitle=data.title[0].value;
-                   for(var i=0 , length=data.title.length; i<length;i++)
-                   {
-                   if(data.title[i].lang=='en'){
-                   thisTitle = data.title[i].value
-                   }//end lang check
-                   
-                   }//end for
+	                   thisTitle=data.title[0].value;
+	                   for(var i=0 , length=data.title.length; i<length;i++)
+	                   {
+		                   if(data.title[i].lang=='en')
+		                   {
+			                   thisTitle = data.title[i].value
+		                   }//end lang check
+	                   
+	                   }//end for
                    }//end if
                    
                    //description
@@ -997,18 +998,20 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
      function facetSlide(){
      
      jQuery(document).ready(function(){
-                            
-                            jQuery('.filter_parent').each(function() {
-                                                          if(jQuery(this).hasClass("opened")) 	jQuery(this).next().css("display","block");
-                                                          });
-                            jQuery('.filter_parent').click(function(event){
-                                                           event.preventDefault();
-                                                           jQuery(this).toggleClass("opened");
-                                                           jQuery(this).next().slideToggle("slow");
-                                                           });
-                            exit();
-                            
-                            });
+		jQuery('.filter_parent').each(function() 
+		{
+              if(jQuery(this).hasClass("opened")) 
+              jQuery(this).next().css("display","block");
+	    });
+        jQuery('.filter_parent').click(function(event)
+        {
+               event.preventDefault();
+               jQuery(this).toggleClass("opened");
+               jQuery(this).next().slideToggle("slow");
+           });
+        exit();
+        
+        });
      }
      
      
