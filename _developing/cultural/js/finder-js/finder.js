@@ -956,36 +956,32 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
      
      
      
-     Jaml.register('rbcriteria', function(data) //rest facets
-                   {
+Jaml.register('rbcriteria', function(data) //rest facets
+   {
+   
+   
+   //removing HNHM from facets
+   var label = data.val.split(' by Estonian Museum of Natural History')[0];
+   if(label=="Video Collection")
+   {
+   	label="Zoology video collection";   
+   }
+ 
+   if(label=="Video collection")
+   {
+	   label="Decay video collection";
+   }
+   
+   a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})}, span(label), span({cls:'total'}, data.count));
+   
+   });
+
+
+Jaml.register('rbcriteria2', function(data) //language facet
+   {
+      a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val, parent: data.field})}, span(langName[data.val]), span({cls:'total'}, data.count ));
                    
-                   
-                   //###
-                   //alert(data.val);
-                   
-                
-                   //removing HNHM from facets
-                   var label = data.val.split('by Estonian Museum of Natural History')[0];
-                   
-                   a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})}, span(label), span({cls:'total'}, data.count));
-                   
-                   
-                   });
-     
-     
-     Jaml.register('rbcriteria2', function(data) //language facet
-                   {
-                   
-                   
-                   
-                   
-                   
-                   a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val, parent: data.field})}, span(langName[data.val]), span({cls:'total'}, data.count ));
-                   
-                   //              li({id: data.field + ':' + data.val},
-                   //         a({href:'javascript:void(0);', title: data.val,onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field}),},
-                   //           span(langName[data.val]), span({cls:'total'}, data.count )));
-                   });
+   });
      
      
      /*------------------------------*/
