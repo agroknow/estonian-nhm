@@ -490,8 +490,7 @@ a.secondary:hover { color:#e63e45;text-decoration:underline; }
 }
 
 
-/**
- ================================================================ITEM VIEW============================================
+/**=====================ITEM VIEW============================================
  */
 /*Left Sidebar in item*/
 .leftSidebarInfo {
@@ -523,7 +522,6 @@ a.secondary:hover { color:#e63e45;text-decoration:underline; }
 {
     /*float:right;*/
     width:160px;
-    height:160px;
 }
 .itemDescription
 {
@@ -662,6 +660,9 @@ span.grflag {
 	background:url(images/flag_gr.png) 0 0 no-repeat;
     text-indent:-9999px;
 }
+a.elflag {
+	background:url(images/flag_gr.png) 0 0 no-repeat;
+}
 span.etflag {
 	background:url(images/flag_et.png) 0 0 no-repeat;
     text-indent:-9999px;
@@ -676,6 +677,10 @@ span.deflag {
 }
 span.frflag {
 	background:url(images/flag_fr.png) 0 0 no-repeat;
+    text-indent:-9999px;
+}
+span.huflag {
+	background:url(images/flag_hu.jpeg) 0 0 no-repeat;
     text-indent:-9999px;
 }
 a.flag {
@@ -694,9 +699,7 @@ a.spflag {
 a.itflag {
 	background:url(images/flag_en.jpg) 0 0 no-repeat;
 }
-a.grflag {
-	background:url(images/flag_en.jpg) 0 0 no-repeat;
-}
+
 
 .access, .reportaproblem {
 	padding:35px 0 0 0;
@@ -714,4 +717,19 @@ a.grflag {
 
 .reportaproblem {
 	background-image:url(images/reportaproblem.png);
+}
+
+#approved
+{
+	padding:10px 0px;
+}
+#approved img
+{
+	width:70px;
+	float:left;	
+}
+#approved p
+{
+	padding-top: 20px;
+	float:left;	
 }

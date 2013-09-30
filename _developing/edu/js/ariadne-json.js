@@ -78,12 +78,12 @@ function getItemJSONP(urlTemp)
                 
                 
                 }else{
-                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.gif" /> </a>');
+                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.png" /> </a>');
                 
                 }
                 
                 }else{
-                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.gif" /> </a>');
+                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.png" /> </a>');
                 
                 }
                 
@@ -194,6 +194,22 @@ function getItemJSONP(urlTemp)
                 }
                 
                 
+/*QUALITY VALIDATOR */
+if(arrayWithJSONS[0].contributors != undefined)
+{
+    if(arrayWithJSONS[0].contributors.length!=undefined)
+    {
+        for(var i=0; i<arrayWithJSONS[0].contributors.length;i++)
+        {
+        	
+	        if(arrayWithJSONS[0].contributors[i].role=='educational validator')
+	        {
+	            document.getElementById('approved').style.visibility="visible";
+		        jQuery('#validator').append(arrayWithJSONS[0].contributors[i].organization)
+	        }
+        }
+    }
+}
                 
                 
 //--            //if languageBlocks has ONLY one value => not array
@@ -237,7 +253,7 @@ function getItemJSONP(urlTemp)
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].parameter!==undefined)
                 {
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].parameter=='text/html'){
-                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.gif" /> </a>');
+                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.png" /> </a>');
                 
                 }else if(arrayWithJSONS[0].expressions[0].manifestations[0].parameter=='text/xml'){
                 jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img  src="images/icons/xml.png" /> </a>');
@@ -261,12 +277,12 @@ function getItemJSONP(urlTemp)
                 
                 
                 }else{
-                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.gif" /> </a>');
+                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.png" /> </a>');
                 
                 }
                 
                 }else{
-                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.gif" /> </a>');
+                jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="images/no-image.png" /> </a>');
                 
                 }
                 

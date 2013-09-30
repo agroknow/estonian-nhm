@@ -957,9 +957,11 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
      
      
 Jaml.register('rbcriteria', function(data) //rest facets
-{
-	
-	var label = data.val.split(' by Estonian Museum of Natural History')[0];
+   {
+   
+   
+   //removing HNHM from facets
+   var label = data.val.split(' by Estonian Museum of Natural History')[0];
    if(label=="Video Collection")
    {
    	label="Zoology video collection";   
@@ -970,15 +972,16 @@ Jaml.register('rbcriteria', function(data) //rest facets
 	   label="Decay video collection";
    }
    
+   a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})}, span(label), span({cls:'total'}, data.count));
    
-	a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})}, span(label), span({cls:'total'}, data.count));
-});
+   });
 
 
 Jaml.register('rbcriteria2', function(data) //language facet
-{
-	a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val, parent: data.field})}, span(langName[data.val]), span({cls:'total'}, data.count ));
-});
+   {
+      a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val, parent: data.field})}, span(langName[data.val]), span({cls:'total'}, data.count ));
+                   
+   });
      
      
      /*------------------------------*/
@@ -991,20 +994,18 @@ Jaml.register('rbcriteria2', function(data) //language facet
      function facetSlide(){
      
      jQuery(document).ready(function(){
-		jQuery('.filter_parent').each(function() 
-		{
-              if(jQuery(this).hasClass("opened")) 
-              jQuery(this).next().css("display","block");
-	    });
-        jQuery('.filter_parent').click(function(event)
-        {
-               event.preventDefault();
-               jQuery(this).toggleClass("opened");
-               jQuery(this).next().slideToggle("slow");
-           });
-        exit();
-        
-        });
+                            
+                            jQuery('.filter_parent').each(function() {
+                                                          if(jQuery(this).hasClass("opened")) jQuery(this).next().css("display","block");
+                                                          });
+                            jQuery('.filter_parent').click(function(event){
+                                                           event.preventDefault();
+                                                           jQuery(this).toggleClass("opened");
+                                                           jQuery(this).next().slideToggle("slow");
+                                                           });
+                            exit();
+                            
+                            });
      }
      
      
