@@ -114,6 +114,9 @@ langName ['lat'] = 'Latin';
 langName['rus'] = 'Russian';
 langName['fi'] = 'Finnish';
 langName['hu'] = 'Hungarian';
+langName['ru'] = 'Russian';
+langName['none'] = 'None';
+
 
 
 google.load("language", "1");
