@@ -118,6 +118,7 @@ langName['ru'] = 'Russian';
 langName['none'] = 'None';
 
 
+
 google.load("language", "1");
 
 Event.observe(window, 'load', function() {

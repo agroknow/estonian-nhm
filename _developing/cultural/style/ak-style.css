@@ -1,4 +1,28 @@
 /**
+	GENERAL
+*/
+
+.link_to_general_finder
+{
+	border-bottom:2px solid black;
+	text-align:center;
+	width:50%;
+	margin:30px auto;
+	font-size: 1.2em;
+}
+
+.link_to_general_finder a
+{
+	font-size: 1.2em;
+	text-decoration: none;
+	color:black;
+}
+
+.link_to_general_finder a:hover
+{
+	color:#e54040;
+}
+/**
  ===========================================SEARCH BOX ======================================
  */
 .cf:before, .cf:after{
