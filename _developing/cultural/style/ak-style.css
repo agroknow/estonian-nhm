@@ -2,31 +2,7 @@
 	GENERAL
 */
 
-.link_to_general_finder
-{
-	text-align:center;
-	width:100%;
-	margin:30px -35px;
-	font-size: 1.2em;
 
-}
-
-.link_to_general_finder a
-{
-	font-size: 1.2em;
-	text-decoration: none;
-	color:#0069be;
-
-}
-
-.link_to_general_finder a img
-{
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-o-border-radius: 5px;
-	-ms-border-radius: 5px;
-	border-radius: 5px;
-}
 /**
  ===========================================SEARCH BOX ======================================
  */
