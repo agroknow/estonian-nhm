@@ -2,6 +2,31 @@
 	GENERAL
 */
 
+/**
+ ===========================================Breadcrumb ======================================
+ */
+
+#breadcrumb{
+	width:100%;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	padding: 3px;
+	font-size: 1.1em;
+}
+
+#breadcrumb a{
+	color:#e54040;
+	text-decoration: none;
+}
+
+#breadcrumb a:hover{
+	text-decoration: underline;
+}
+
+.active{
+	font-weight: bold;
+}
+
 
 /**
  ===========================================SEARCH BOX ======================================
@@ -108,7 +133,7 @@
     border-color: transparent black transparent;
     top: 12px;
     left: -6px;
-    
+
 }
 
 .form-wrapper button:hover:before{
@@ -204,7 +229,7 @@
     padding-left:5px;
     text-decoration:none;
     font: bold 15px/20px 'lucida sans', 'trebuchet MS', 'Tahoma';
-    
+
 }
 
 .slider-prev{
@@ -237,7 +262,7 @@
 
 .pager a.activeSlide, .pager a:hover {
 	background-position:3px -20px;
-    
+
 }
 
 /**
@@ -283,8 +308,8 @@
     max-width : 650px; /*fix infinite length of keywords line*/
 	margin-bottom:7px;
     overflow:hidden; /*### need change because it hides some keywords*/
-    
-    
+
+
 }
 
 
@@ -360,7 +385,7 @@ a.secondary:hover { color:#e63e45;text-decoration:underline; }
     padding-left:10px;
     color:black;
     text-decoration:none;
-    
+
 }
 .yui-pg-next
 {
@@ -380,7 +405,7 @@ a.secondary:hover { color:#e63e45;text-decoration:underline; }
 	-moz-border-radius:0 0 4px 4px;
 	border-radius:0 0 4px 4px;*/
     border-right: 1px solid black;
-    
+
 }
 .filter a {
 	display:block;
@@ -397,12 +422,12 @@ a.secondary:hover { color:#e63e45;text-decoration:underline; }
     background:url(images/arrow-down.png) 195px center no-repeat black;
     color : white;
     font:20px;
-    
+
 }
 
 .filter_parent a {
     color:white;
-    
+
 }
 
 .filter_parent:hover {
@@ -474,7 +499,7 @@ a.secondary:hover { color:#e63e45;text-decoration:underline; }
 	background-color:white;
 	font-weight:normal;
 	text-align:center;
-    
+
 }
 .remove_filters {
 	text-align:right;
