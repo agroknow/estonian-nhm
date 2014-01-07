@@ -53,6 +53,19 @@
 	font-weight: bold;
 }
 
+/**
+ =========================================== FOOTER ======================================
+ */
+.footer{
+	border-top:1px solid black;
+	min-height: 10px;
+	padding-top: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+
+
 
 /**
  ===========================================SEARCH BOX ======================================

@@ -53,6 +53,17 @@
 	font-weight: bold;
 }
 
+/**
+ =========================================== FOOTER ======================================
+ */
+.footer{
+	border-top:1px solid black;
+	min-height: 10px;
+	padding-top: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
 
 /**
  ===========================================SEARCH BOX ======================================
@@ -215,7 +226,7 @@
  =========================================== **HIGHLIGHTED PATHS - TEACHER PATHS ** ======================================
  */
 .is_slider{
-    height:600px;
+    height:450px;
     width: 100%;
 }
 
@@ -227,7 +238,7 @@
     width:48%;
     float:left;
     margin-bottom: 50px;
-    height:600px;
+    height:400px;
 }
 
 .highlighted_paths h3{
